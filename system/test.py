@@ -7,7 +7,6 @@ import sys
 import voiceparser as vp
 import logger
 
-import Ma
 debug = 1
 
 
