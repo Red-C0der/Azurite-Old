@@ -36,6 +36,31 @@
             "title": "Setup"
         }, 
         {
+            "location": "/system-modules/", 
+            "text": "All System Modules\n\n\nHere you can see a short description of ALL system modules,\n\n\nto know what the do.\n\n\ntest.py\n\n\nTheoretically we could skip this file, because essentially there is nothing special\n\n\nin there. It's just used to test things.\n\n\nsetup.py\n\n\ninstall()\n\n\nThis function starts the installation-progress.\nIt reads each tag from the setting/setup_sequence.xml and\nruns the corresponding action.\n\n\n\nlogger.py\n\n\nwrite(level, message, lloc=\"\", LogFile=\"\")\n\n\nThis function opens a logfile, if it is specified in * `LogFile=\"\"` !", 
+            "title": "System File Explanation"
+        }, 
+        {
+            "location": "/system-modules/#all-system-modules", 
+            "text": "Here you can see a short description of ALL system modules,  to know what the do.", 
+            "title": "All System Modules"
+        }, 
+        {
+            "location": "/system-modules/#testpy", 
+            "text": "Theoretically we could skip this file, because essentially there is nothing special  in there. It's just used to test things.", 
+            "title": "test.py"
+        }, 
+        {
+            "location": "/system-modules/#setuppy", 
+            "text": "install()  This function starts the installation-progress.\nIt reads each tag from the setting/setup_sequence.xml and\nruns the corresponding action.", 
+            "title": "setup.py"
+        }, 
+        {
+            "location": "/system-modules/#loggerpy", 
+            "text": "write(level, message, lloc=\"\", LogFile=\"\")  This function opens a logfile, if it is specified in * `LogFile=\"\"` !", 
+            "title": "logger.py"
+        }, 
+        {
             "location": "/usage/", 
             "text": "", 
             "title": "Use Azurite"
