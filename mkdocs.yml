@@ -12,6 +12,7 @@ pages:
 - Documentation:
     - 'Installation': 'installation.md'
     - 'Setup': 'setup.md'
+    - 'System File Explanation': 'system-modules.md'
     - 'Use Azurite': 'usage.md'
     - 'Azurite Script': 'azurite-script.md'
     - 'API - Implementation': 'api-implementation.md'
