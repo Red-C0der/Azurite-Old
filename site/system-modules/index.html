@@ -140,11 +140,11 @@
     
         <li class="main active"><a href="#all-system-modules">All System Modules</a></li>
         
-            <li><a href="#testpy">test.py</a></li>
+            <li><a href="#testpy-just-for-testing">test.py - Just for testing</a></li>
         
-            <li><a href="#setuppy">setup.py</a></li>
+            <li><a href="#setuppy-installing-the-system">setup.py - Installing the system</a></li>
         
-            <li><a href="#loggerpy">logger.py</a></li>
+            <li><a href="#loggerpy-handling-logfiles">logger.py - Handling logfiles</a></li>
         
     
     </ul>
@@ -154,18 +154,25 @@
 <h1 id="all-system-modules">All System Modules</h1>
 <p>Here you can see a short description of ALL system modules,</p>
 <p>to know what the do.</p>
-<h2 id="testpy">test.py</h2>
-<p>Theoretically we could skip this file, because essentially there is nothing special</p>
-<p>in there. It's just used to test things.</p>
-<h2 id="setuppy">setup.py</h2>
-<h3 id="install">install()</h3>
-<pre><code>This function starts the installation-progress.
-It reads each tag from the setting/setup_sequence.xml and
-runs the corresponding action.
+<h3 id="testpy-just-for-testing">test.py - Just for testing</h3>
+<pre><code>    Theoretically we could skip this file, because essentially there is nothing special
+    in there. It's just used to test things.
 </code></pre>
-<h2 id="loggerpy">logger.py</h2>
-<h3 id="writelevel-message-lloc-logfile">write(level, message, lloc="", LogFile="")</h3>
-<pre><code>This function opens a logfile, if it is specified in * `LogFile=""` !
+
+<h3 id="setuppy-installing-the-system">setup.py - Installing the system</h3>
+<h4 id="install">install()</h4>
+<pre><code>    This function starts the installation-progress.
+    It reads each tag from the setting/setup_sequence.xml and
+    runs the corresponding action.
+</code></pre>
+
+<h3 id="loggerpy-handling-logfiles">logger.py - Handling logfiles</h3>
+<h4 id="writelevel-message-lloc-logfile">write(level, message, lloc="", LogFile="")</h4>
+<pre><code>    This function opens a logfile, if it is specified in [LogFile=&quot;&quot;]
+    or generates a new one with the current date as filename,
+    if no name is specified in [LogFile=&quot;&quot;].
+    Then it write's the message [message] with the
+    logging-level [level] and the current time to a new line in the file.
 </code></pre></div>
         </div>
 
