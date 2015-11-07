@@ -9,11 +9,10 @@ import logger
 
 debug = 1
 
-
-vp.listen_to_activator("jarvis", debug=debug)
+cfg.loadbackup(debug=debug)
 
 # Setting Value
-# cfg.setval("values/version", attrib_name="val", new_attrib_val="0.3", debug=debug)
+#cfg.setval("values/version", attrib_name="val", new_attrib_val="0.3", debug=debug)
 
 # Getting value
 # print cfg.getval("MainValues", "version", debug=debug)

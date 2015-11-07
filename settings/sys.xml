@@ -1,35 +1,35 @@
 <?xml version='1.0' encoding='UTF-8'?>
-	<Azurite>
-		<values>
-			<version val="0.2" />
-			<author val="Red_C0der" />
-		</values>
+<Azurite>
+	<values>
+		<version val="0.2" />
+		<author val="Red_C0der" />
+	</values>
 
-		<users>
-			<user realname="root" username="root" nickname="root" address="Example Street 10, 00000 Berlin, Germany" tel_priv="00000 0000000" tel_buiss="+00 00000000000" password="123456"
-		</users>
+	<users>
+		<user address="Example Street 10, 00000 Berlin, Germany" nickname="root" password="123456" realname="root" tel_buiss="+00 00000000000" tel_priv="00000 0000000" username="root" />
+	</users>
 
-		<security>
-			<securitykey val="0000000000000000000" date="00.00.0000-00:00:00"/>
-			<shutdownkey val="7ag32dakjgdlk5a87af7" date="00.00.0000-00:00:00"/>
-			<restartkey val="2k6jhkeg5lfe3ug3kj56e" date="00.00.0000-00:00:00"/>
-		</security>
+	<security>
+		<securitykey date="00.00.0000-00:00:00" val="0000000000000000000" />
+		<shutdownkey date="00.00.0000-00:00:00" val="7ag32dakjgdlk5a87af7" />
+		<restartkey date="00.00.0000-00:00:00" val="2k6jhkeg5lfe3ug3kj56e" />
+	</security>
 
-		<network>
-			<myhost val="127.0.0.1"/>
-			<hostname val="Azurite.Local"/>
-		</network>
+	<network>
+		<myhost val="127.0.0.1" />
+		<hostname val="Azurite.Local" />
+	</network>
 
-		<trustedhosts>
-			<host ip="127.0.0.1" name="Local Machine" level="10"/>
-			<host ip="0.0.0.0" name="Example Host" level="0"/>
-		</trustedhosts>
+	<trustedhosts>
+		<host ip="127.0.0.1" level="10" name="Local Machine" />
+		<host ip="0.0.0.0" level="0" name="Example Host" />
+	</trustedhosts>
 
-		<modules>
-			<module id="moduleloader" location="system/moduleloader.py" active="True" />
-			<module id="logger" location="system/logger.py" active="True" />
-			<module id="cryptographer" location="system/cryptographer.py" active="True" />
-			<module id="configparser" location="system/configparser.py" active="True" />
-			<module id="voiceparser" location="system/voiceparser.py" active="True" />
-		</modules>
-	</Azurite>
+	<modules>
+		<module active="True" id="moduleloader" location="system/moduleloader.py" />
+		<module active="True" id="logger" location="system/logger.py" />
+		<module active="True" id="cryptographer" location="system/cryptographer.py" />
+		<module active="True" id="configparser" location="system/configparser.py" />
+		<module active="True" id="voiceparser" location="system/voiceparser.py" />
+	</modules>
+</Azurite>

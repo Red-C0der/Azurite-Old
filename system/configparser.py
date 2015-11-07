@@ -195,12 +195,208 @@ def delfile(filename, debug=0):
         return False
 
 
-def deltag(path, filename="../settings/sys.xml", debug=0):
+def makebackup(sourcefile="sys.xml", filepath="../settings/", debug=0):
+    import os
+    import logger
+    lloc = "File: configparser.py | Function: makebackup | Message: "
+    logger.write("i", "Trying to make a backup with arguments: sourcefile=["+str(sourcefile)+"], filepath=["+str(filepath)+"], debug=["+str(debug)+"]!", lloc=lloc)
+    try:
+        tmp = sourcefile
+        filename = filepath + tmp
+        if debug == 1:
+            logger.write("d", "filename was successfully merged! filename=["+str(filename)+"]", lloc=lloc)
+        sourcefile = open(filename, "r").read()
+        if debug == 1:
+            logger.write("d", "Sourcefile was successfully opened and red!", lloc=lloc)
+        destinationfile = open(filepath + "backup_" + tmp, "w")
+        if debug == 1:
+            logger.write("d", "Destinationfile was successfully opened!", lloc=lloc)
+        destinationfile.write(sourcefile)
+        if debug == 1:
+            logger.write("d", "Successfully written sourcefile to destinationfile!", lloc=lloc)
+        return True
+    except StopIteration:
+        logger.write("e", "StopIteration: next() method does not point at any object!", lloc=lloc)
+        return False
+    except SystemExit:
+        logger.write("e", "SystemExit: sys.exit() was executed!", lloc=lloc)
+        return False
+    except ArithmeticError:
+        logger.write("e", "ArithmeticError: Numeric calculation error!", lloc=lloc)
+        return False
+    except OverflowError:
+        logger.write("e", "OverflowError: Calculation exceeded maximum limit for numeric type!", lloc=lloc)
+        return False
+    except FloatingPointError:
+        logger.write("e", "FloatingPointError: FloatingPoint calculation failed!", lloc=lloc)
+        return False
+    except ZeroDivisionError:
+        logger.write("e", "ZeroDivisionError: Division or modulo by Zero took place!", lloc=lloc)
+        return False
+    except AssertionError:
+        logger.write("e", "AssertionError: Assert statement failed!", lloc=lloc)
+        return False
+    except AttributeError:
+        logger.write("e", "AttributeError: Failure of attribute reference or assignment!", lloc=lloc)
+        return False
+    except EOFError:
+        logger.write("e", "EOFError: No input from raw_input() or input() as the file has ended!", lloc=lloc)
+        return False
+    except ImportError:
+        logger.write("e", "ImportError: Import statement failed!", lloc=lloc)
+        return False
+    except KeyboardInterrupt:
+        logger.write("e", "KeyboardInterrupt: Program has ended, during KeyboardInterrupt (Ctrl + C)!", lloc=lloc)
+        return False
+    except LookupError:
+        logger.write("e", "LookupError: LookupError!", lloc=lloc)
+        return False
+    except IndexError:
+        logger.write("e", "IndexError: Index in sequence was not found!", lloc=lloc)
+        return False
+    except KeyError:
+        logger.write("e", "KeyError: Key in dictionary was not found!", lloc=lloc)
+        return False
+    except NameError:
+        logger.write("e", "NameError: Identifier was not found in local or global namespace!", lloc=lloc)
+        return False
+    except UnboundLocalError:
+        logger.write("e", "UnboundLocalError: No value was assigned to variable in function or method!", lloc=lloc)
+        return False
+    except EnvironmentError:
+        logger.write("e", "EnvironmentError: Exception occurred outside the Python environment!", lloc=lloc)
+        return False
+    except IOError:
+        logger.write("e", "IOError: Input / Output operation failed!", lloc=lloc)
+        return False
+    except SyntaxError:
+        logger.write("e", "SyntaxError: Syntax error in python code!", lloc=lloc)
+        return False
+    except IndentationError:
+        logger.write("e", "IndentationError: Indentation is not specified properly!", lloc=lloc)
+        return False
+    except SystemError:
+        logger.write("e", "SystemError: Interpreter found internal problem, but interpreter has not exited!", lloc=lloc)
+        return False
+    except TypeError:
+        logger.write("e", "TypeError: Operation or Function is attempted which is invalid for the specific data type!", lloc=lloc)
+        return False
+    except ValueError:
+        logger.write("e", "ValueError: Built-in function for data type has valid type of arguments, but arguments have invalid values specified!", lloc=lloc)
+        return False
+    except RuntimeError:
+        logger.write("e", "RuntimeError: Generated error does not fall into any category!", lloc=lloc)
+        return False
+    except NotImplementedError:
+        logger.write("e", "NotImplementedError: Abstract method that needs to be implemented in an inherited class is not actually implemented!", lloc=lloc)
+        return False
+
+
+def loadbackup(sourcefile="backup_sys.xml", destinationfile="sys.xml", filepath="../settings/", debug=0):
+    import os
+    import logger
+    lloc = "File: configparser.py | Function: loadbackup | Message: "
+    logger.write("i", "Trying to load backup with arguments: sourcefile=["+str(sourcefile)+"], destinationfile=["+str(destinationfile)+"], filepath=["+str(filepath)+"], debug=["+str(debug)+"]!", lloc=lloc)
+    try:
+        tmp = sourcefile
+        filename = filepath + tmp
+        if debug == 1:
+            logger.write("d", "filename was successfully merged! filename=["+str(filename)+"]", lloc=lloc)
+        sourcefile = open(filename, "r").read()
+        if debug == 1:
+            logger.write("d", "Sourcefile was successfully opened and red!", lloc=lloc)
+        destinationfile = open(filepath + destinationfile, "w")
+        if debug == 1:
+            logger.write("d", "Destinationfile was successfully opened!", lloc=lloc)
+        destinationfile.write(sourcefile)
+        if debug == 1:
+            logger.write("d", "Successfully written sourcefile to destinationfile!", lloc=lloc)
+        return True
+    except StopIteration:
+        logger.write("e", "StopIteration: next() method does not point at any object!", lloc=lloc)
+        return False
+    except SystemExit:
+        logger.write("e", "SystemExit: sys.exit() was executed!", lloc=lloc)
+        return False
+    except ArithmeticError:
+        logger.write("e", "ArithmeticError: Numeric calculation error!", lloc=lloc)
+        return False
+    except OverflowError:
+        logger.write("e", "OverflowError: Calculation exceeded maximum limit for numeric type!", lloc=lloc)
+        return False
+    except FloatingPointError:
+        logger.write("e", "FloatingPointError: FloatingPoint calculation failed!", lloc=lloc)
+        return False
+    except ZeroDivisionError:
+        logger.write("e", "ZeroDivisionError: Division or modulo by Zero took place!", lloc=lloc)
+        return False
+    except AssertionError:
+        logger.write("e", "AssertionError: Assert statement failed!", lloc=lloc)
+        return False
+    except AttributeError:
+        logger.write("e", "AttributeError: Failure of attribute reference or assignment!", lloc=lloc)
+        return False
+    except EOFError:
+        logger.write("e", "EOFError: No input from raw_input() or input() as the file has ended!", lloc=lloc)
+        return False
+    except ImportError:
+        logger.write("e", "ImportError: Import statement failed!", lloc=lloc)
+        return False
+    except KeyboardInterrupt:
+        logger.write("e", "KeyboardInterrupt: Program has ended, during KeyboardInterrupt (Ctrl + C)!", lloc=lloc)
+        return False
+    except LookupError:
+        logger.write("e", "LookupError: LookupError!", lloc=lloc)
+        return False
+    except IndexError:
+        logger.write("e", "IndexError: Index in sequence was not found!", lloc=lloc)
+        return False
+    except KeyError:
+        logger.write("e", "KeyError: Key in dictionary was not found!", lloc=lloc)
+        return False
+    except NameError:
+        logger.write("e", "NameError: Identifier was not found in local or global namespace!", lloc=lloc)
+        return False
+    except UnboundLocalError:
+        logger.write("e", "UnboundLocalError: No value was assigned to variable in function or method!", lloc=lloc)
+        return False
+    except EnvironmentError:
+        logger.write("e", "EnvironmentError: Exception occurred outside the Python environment!", lloc=lloc)
+        return False
+    except IOError:
+        logger.write("e", "IOError: Input / Output operation failed!", lloc=lloc)
+        return False
+    except SyntaxError:
+        logger.write("e", "SyntaxError: Syntax error in python code!", lloc=lloc)
+        return False
+    except IndentationError:
+        logger.write("e", "IndentationError: Indentation is not specified properly!", lloc=lloc)
+        return False
+    except SystemError:
+        logger.write("e", "SystemError: Interpreter found internal problem, but interpreter has not exited!", lloc=lloc)
+        return False
+    except TypeError:
+        logger.write("e", "TypeError: Operation or Function is attempted which is invalid for the specific data type!", lloc=lloc)
+        return False
+    except ValueError:
+        logger.write("e", "ValueError: Built-in function for data type has valid type of arguments, but arguments have invalid values specified!", lloc=lloc)
+        return False
+    except RuntimeError:
+        logger.write("e", "RuntimeError: Generated error does not fall into any category!", lloc=lloc)
+        return False
+    except NotImplementedError:
+        logger.write("e", "NotImplementedError: Abstract method that needs to be implemented in an inherited class is not actually implemented!", lloc=lloc)
+        return False
+
+
+def deltag(path, filename="sys.xml", filepath="../settings/", debug=0):
     import os
     import logger
     lloc = "File: configparser.py | Function: setval | Message: "
-    logger.write("i", "Trying to delete tag in configfile with arguments: path=["+str(path)+"], filename=["+str(filename)+"], debug=["+str(debug)+"]!", lloc=lloc)
+    logger.write("i", "Trying to delete tag in configfile with arguments: path=["+str(path)+"], filename=["+str(filename)+"], filepath=["+str(filepath)+"], debug=["+str(debug)+"]!", lloc=lloc)
     try:
+        tmp = filename
+        filename = filepath + tmp
         import xml.etree.ElementTree as ET
         tree = ET.parse(filename)
         if debug == 1:
@@ -302,12 +498,14 @@ def deltag(path, filename="../settings/sys.xml", debug=0):
         return False
 
 
-def delsection(path, filename="../settings/sys.xml", debug=0):
+def delsection(path, filename="sys.xml", filepath="../settings/", debug=0):
     import os
     import logger
     lloc = "File: configparser.py | Function: setval | Message: "
-    logger.write("i", "Trying to delete section in configfile with arguments: path=["+str(path)+"], filename=["+str(filename)+"], debug=["+str(debug)+"]!", lloc=lloc)
+    logger.write("i", "Trying to delete section in configfile with arguments: path=["+str(path)+"], filename=["+str(filename)+"], filepath=["+str(filepath)+"], debug=["+str(debug)+"]!", lloc=lloc)
     try:
+        tmp = filename
+        filename = filepath + tmp
         import xml.etree.ElementTree as ET
         tree = ET.parse(filename)
         if debug == 1:
@@ -329,7 +527,6 @@ def delsection(path, filename="../settings/sys.xml", debug=0):
         for child in root:
             if splitted is True:
                 if child.tag == splitpath[0]:
-                    print "found!"
                     root.remove(child)
                     if debug == 1:
                         logger.write("d", "Removed path=["+str(path)+"] from file=["+str(filename)+"]!", lloc=lloc)
@@ -339,7 +536,6 @@ def delsection(path, filename="../settings/sys.xml", debug=0):
                     return True
             elif splitted is False:
                 if child.tag == splitpath:
-                    print "found!"
                     root.remove(child)
                     if debug == 1:
                         logger.write("d", "Removed path=["+str(path)+"] from file=["+str(filename)+"]!", lloc=lloc)
@@ -424,12 +620,14 @@ def delsection(path, filename="../settings/sys.xml", debug=0):
         return False
 
 
-def setval(path, attrib_name="", new_attrib_val="", new_text_val="", filename="../settings/sys.xml", debug=0):
+def setval(path, attrib_name="", new_attrib_val="", new_text_val="", filename="sys.xml", filepath="../settings/", debug=0):
     import os
     import logger
     lloc = "File: configparser.py | Function: setval | Message: "
-    logger.write("i", "Trying to set value in configfile with arguments: path=["+str(path)+"], attrib_name=["+str(attrib_name)+"], new_attrib_val=["+str(new_attrib_val)+"], new_text_val=["+str(new_text_val)+"], filename=["+str(filename)+"], debug=["+str(debug)+"]!", lloc=lloc)
+    logger.write("i", "Trying to set value in configfile with arguments: path=["+str(path)+"], attrib_name=["+str(attrib_name)+"], new_attrib_val=["+str(new_attrib_val)+"], new_text_val=["+str(new_text_val)+"], filename=["+str(filename)+"], filepath=["+str(filepath)+"], debug=["+str(debug)+"]!", lloc=lloc)
     try:
+        tmp = filename
+        filename = filepath + tmp
         import xml.etree.ElementTree as ET
         tree = ET.parse(filename)
         if debug == 1:
@@ -541,12 +739,14 @@ def setval(path, attrib_name="", new_attrib_val="", new_text_val="", filename=".
         return False
 
 
-def getval(path, filename="../settings/sys.xml", debug=0):
+def getval(path, filename="sys.xml", filepath="../settings/", debug=0):
     import os
     import logger
     lloc = "File: configparser.py | Function: getval | Message: "
-    logger.write("i", "Trying to get value in configfile with arguments: path=["+str(path)+"], filename=["+str(filename)+"], debug=["+str(debug)+"]!", lloc=lloc)
+    logger.write("i", "Trying to get value in configfile with arguments: path=["+str(path)+"], filename=["+str(filename)+"], filepath=["+str(filepath)+"], debug=["+str(debug)+"]!", lloc=lloc)
     try:
+        tmp = filename
+        filename = filepath + tmp
         import xml.etree.ElementTree as ET
         tree = ET.parse(filename)
         if debug == 1:
