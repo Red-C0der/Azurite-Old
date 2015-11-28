@@ -12,7 +12,7 @@ __author__ = 'Red_C0der'
 #  |   Version: 0.0.2                                                              |
 #  |   Development-State: Alpha                                                    |
 #  |   Project-ID: 0776                                                            |
-#  |   GitHub-Page: http://red-c0der.github.io/Project-Azurite                     |
+#  |   GitHub-Page: http://red-c0der.github.io/Azurite                             |
 #  |   License: /LICENSE.txt                                                       |
 #  |                                                                               |
 #  |                                                                               |

@@ -1,4 +1,4 @@
-# coding=utf-8
+# -*- coding: utf-8 -*-
 __author__ = 'Red_C0der'
 
 #   /=============================================================================\
@@ -22,54 +22,80 @@ __author__ = 'Red_C0der'
 #  |   E-Mail: redc0der.mail@gmail.com                                             |
 #   \=============================================================================/
 
-
-def write(level, message, lloc="", LogFile=""):
+def newconsole(user, host, title, debug=0):
     try:
-        import logging
-        if LogFile == "":
-            from time import gmtime, strftime
-            LogName = strftime("%d-%m-%Y", gmtime())
-            LogLoc = "../logs/"
-            LogF = LogLoc+LogName+".log"
-        else:
-            LogF = LogFile
-        logging.basicConfig(filename=LogF, level=logging.DEBUG, format='%(asctime)s | %(levelname)s: %(message)s', datefmt='%d/%m/%Y %I:%M:%S')
-        if lloc != "":
-            if level == "i":
-                logging.info(lloc+message)
-            if level == "w":
-                logging.warning(lloc+message)
-            if level == "e":
-                logging.error(lloc+message)
-            if level == "c":
-                logging.critical(lloc+message)
-            if level == "ex":
-                logging.exception(lloc+message)
-            if level == "d":
-                logging.debug(lloc+message)
-            if level != "i" and level != "w" and level != "e" and level != "c" and level != "ex" and level != "d":
-                import inspect
-                logging.exception("Function " + inspect.stack()[1][3] + " tried to use logger.write() with invalid logging level " + level +  " !")
-                return False
-            return True
-        else:
-            if level == "i":
-                logging.info(message)
-            if level == "w":
-               logging.warning(message)
-            if level == "e":
-                logging.error(message)
-            if level == "c":
-                logging.critical(message)
-            if level == "ex":
-                logging.exception(message)
-            if level == "d":
-                logging.debug(message)
-            if level != "i" and level != "w" and level != "e" and level != "c" and level != "ex" and level != "d":
-                import inspect
-                logging.exception("Function " + inspect.stack()[1][3] + " tried to use logger.write() with invalid logging level " + level +  " !")
-                return False
-            return True
+        import logger
+        import sys
+        lloc = "File: console.py | Function: newconsole | Message: "
+        logger.write("i", "Trying create new console with arguments: user=["+str(user)+"], host=["+str(host)+"], title=["+str(title)+"], debug=["+str(debug)+"]!", lloc=lloc)
+        while True:
+            userinput = raw_input(user+"$ ")
+            uinsplit(userinput, debug=debug)
+    except:
+        pass
+
+
+def uinsplit(userinput, debug=0):
+    try:
+        import logger
+        lloc = "File: console.py | Function: uinsplit | Message: "
+        logger.write("i", "Trying to split userinput with arguments: userinput=["+str(userinput)+"], debug=["+str(debug)+"]!", lloc=lloc)
+        splitted = userinput.split(" ")
+        command = splitted[0]
+        del splitted[0]
+        args = splitted
+        print "args: "+args
+        commandanalyzer(command, args, debug=debug)
+    except:
+        pass
+
+
+def commandanalyzer(command, args, debug=0):
+    try:
+        import logger
+        import termcolor
+        lloc = "File: console.py | Function: commandanalyzer | Message: "
+        logger.write("i", "Trying to analyze command with arguments: command=["+str(command)+"], args=["+str(args)+"], debug=["+str(debug)+"]!", lloc=lloc)
+
+        if command == "shutdown":
+            if not args:
+                print(termcolor.colored("USAGE: shutdown [option]", "red", attrs=["bold"]))
+            else:
+                if len(args) > 0:
+                    print "more than 0"
+                if len(args) > 1:
+                    print "more than 1"
+
+    except:
+        pass
+
+
+def getTerminalSize(debug=0):
+    try:
+        import os
+        env = os.environ
+        def ioctl_GWINSZ(fd):
+            try:
+                import fcntl, termios, struct, os
+                cr = struct.unpack('hh', fcntl.ioctl(fd, termios.TIOCGWINSZ,
+            '1234'))
+            except:
+                return
+            return cr
+        cr = ioctl_GWINSZ(0) or ioctl_GWINSZ(1) or ioctl_GWINSZ(2)
+        if not cr:
+            try:
+                fd = os.open(os.ctermid(), os.O_RDONLY)
+                cr = ioctl_GWINSZ(fd)
+                os.close(fd)
+            except:
+                pass
+        if not cr:
+            cr = (env.get('LINES', 25), env.get('COLUMNS', 80))
+        return int(cr[1]), int(cr[0])
+    except ImportError:
+        logger.write("e", "ImportError: Some module in list created the error!", lloc=lloc)
+        return False
     except StopIteration:
         logger.write("e", "StopIteration: next() method does not point at any object!", lloc=lloc)
         return False

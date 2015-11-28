@@ -1,4 +1,4 @@
-# coding=utf-8
+# -*- coding: utf-8 -*-
 __author__ = 'Red_C0der'
 
 #   /=============================================================================\
@@ -23,25 +23,88 @@ __author__ = 'Red_C0der'
 #   \=============================================================================/
 
 
-def newkey(debug=0):
+def colorPrint(text, fgc=500, bgc=500, attrc="", newline=True, debug=0):
     try:
-        import os
         import logger
-        lloc = "File: cryptographer.py | Function: newkey | Message: "
-        logger.write("i", "Generating new Security Key with arguments: debug=["+str(debug)+"]!", lloc=lloc)
-        BLOCK_SIZE = 32
-        PADDING = '{'
-        if debug == 1:
-            logger.write("d", "BLOCK_SIZE = ["+str(BLOCK_SIZE)+"]", lloc=lloc)
-            logger.write("d", "PADDING = ["+str(PADDING)+"]", lloc=lloc)
-        pad = lambda s: s + (BLOCK_SIZE - len(s) % BLOCK_SIZE) * PADDING
-        if debug == 1:
-            logger.write("d", "pad = ["+str(pad)+"]", lloc=lloc)
-        secret = os.urandom(BLOCK_SIZE)
-        if debug == 1:
-            logger.write("d", "secret is hidden for security reasons!", lloc=lloc)
-        logger.write("i", "Successfully generated new Security Key!", lloc=lloc)
-        return secret
+        lloc = "File: output.py | Function: colorPrint | Message: "
+        logger.write("i", "Trying to use colorPrint with arguments: text=["+str(text)+"], fgc=["+str(fgc)+"], bgc=["+str(fgc)+"], attrc=["+str(attrc)+"], newline=["+str(newline)+"],debug=["+str(debug)+"]!", lloc=lloc)
+        from colored import fg, style, attr, bg
+        import sys
+        if newline is True:
+            if fgc != 500:
+                if bgc == 500:
+                    if attrc == "":
+                        color = fg(fgc)
+                        att = attr(attrc)
+                        print (color + text + style.RESET)
+                        return True
+                    else:
+                        color = fg(fgc)
+                        att = attr(attrc)
+                        print (color + att + text + style.RESET)
+                        return True
+                else:
+                    if attrc == "":
+                        color = fg(fgc) + bg(bgc)
+                        att = attr(attrc)
+                        print (color + text + style.RESET)
+                        return True
+                    else:
+                        color = fg(fgc) + bg(bgc)
+                        att = attr(attrc)
+                        print (color + att + text + style.RESET)
+                        return True
+            else:
+                if bgc != 500:
+                    if attrc == "":
+                        color = bg(bgc)
+                        att = attr(attrc)
+                        print (color + text + style.RESET)
+                        return True
+                    else:
+                        color = bg(bgc)
+                        att = attr(attrc)
+                        print (color + att + text + style.RESET)
+                        return True
+        else:
+            if fgc != 500:
+                if bgc == 500:
+                    if attrc == "":
+                        color = fg(fgc)
+                        att = attr(attrc)
+                        sys.stdout.write(color + text + style.RESET)
+                        return True
+                    else:
+                        color = fg(fgc)
+                        att = attr(attrc)
+                        sys.stdout.write(color + att + text + style.RESET)
+                        return True
+                else:
+                    if attrc == "":
+                        color = fg(fgc) + bg(bgc)
+                        att = attr(attrc)
+                        sys.stdout.write(color + text + style.RESET)
+                        return True
+                    else:
+                        color = fg(fgc) + bg(bgc)
+                        att = attr(attrc)
+                        sys.stdout.write(color + att + text + style.RESET)
+                        return True
+            else:
+                if bgc != 500:
+                    if attrc == "":
+                        color = bg(bgc)
+                        att = attr(attrc)
+                        sys.stdout.write(color + text + style.RESET)
+                        return True
+                    else:
+                        color = bg(bgc)
+                        att = attr(attrc)
+                        sys.stdout.write(color + att + text + style.RESET)
+                        return True
+    except ImportError:
+        logger.write("e", "ImportError: Some module could not be imported!", lloc=lloc)
+        return False
     except StopIteration:
         logger.write("e", "StopIteration: next() method does not point at any object!", lloc=lloc)
         return False
@@ -119,135 +182,38 @@ def newkey(debug=0):
         return False
 
 
-def encrypt(key, string, debug=0):
+def statePrint(state, message, debug=0):
     try:
         import logger
-        lloc = "File: cryptographer.py | Function: encrypt| Message: "
-        logger.write("i", "Encrypting string with arguments: key=hidden, string=["+string+"], debug=["+str(debug)+"]!", lloc=lloc)
-        from Crypto.Cipher import AES
-        import base64
-        BLOCK_SIZE = 32
-        PADDING = '{'
-        if debug is 1:
-            logger.write("d", "BLOCK_SIZE = ["+str(BLOCK_SIZE)+"]", lloc=lloc)
-            logger.write("d", "PADDING = ["+str(PADDING)+"]", lloc=lloc)
-        pad = lambda s: s + (BLOCK_SIZE - len(s) % BLOCK_SIZE) * PADDING
-        if debug is 1:
-            logger.write("d", "pad = ["+str(pad)+"]", lloc=lloc)
-        EncodeAES = lambda c, s: base64.b64encode(c.encrypt(pad(s)))
-        if debug is 1:
-            logger.write("d", "EncodeAES = ["+str(EncodeAES)+"]", lloc=lloc)
-        cipher = AES.new(key)
-        if debug is 1:
-            logger.write("d", "cipher = ["+str(cipher)+"]", lloc=lloc)
-        encoded = EncodeAES(cipher, string)
-        if debug is 1:
-            logger.write("d", "encoded = ["+str(encoded)+"]", lloc=lloc)
-        logger.write("i", "Successfully encoded string!", lloc=lloc)
-        return encoded
-    except StopIteration:
-        logger.write("e", "StopIteration: next() method does not point at any object!", lloc=lloc)
-        return False
-    except SystemExit:
-        logger.write("e", "SystemExit: sys.exit() was executed!", lloc=lloc)
-        return False
-    except ArithmeticError:
-        logger.write("e", "ArithmeticError: Numeric calculation error!", lloc=lloc)
-        return False
-    except OverflowError:
-        logger.write("e", "OverflowError: Calculation exceeded maximum limit for numeric type!", lloc=lloc)
-        return False
-    except FloatingPointError:
-        logger.write("e", "FloatingPointError: FloatingPoint calculation failed!", lloc=lloc)
-        return False
-    except ZeroDivisionError:
-        logger.write("e", "ZeroDivisionError: Division or modulo by Zero took place!", lloc=lloc)
-        return False
-    except AssertionError:
-        logger.write("e", "AssertionError: Assert statement failed!", lloc=lloc)
-        return False
-    except AttributeError:
-        logger.write("e", "AttributeError: Failure of attribute reference or assignment!", lloc=lloc)
-        return False
-    except EOFError:
-        logger.write("e", "EOFError: No input from raw_input() or input() as the file has ended!", lloc=lloc)
-        return False
+        lloc = "File: output.py | Function: statePrint | Message: "
+        logger.write("i", "Trying to use statePrint with arguments: state=["+str(state)+"], message=["+str(message)+"], debug=["+str(debug)+"]!", lloc=lloc)
+        import termcolor
+        if state == "":
+            print("[....] " + message)
+            return True
+        if state == "ok":
+            print("[ " + termcolor.colored("OK", "green", attrs=["bold"]) + " ] " + termcolor.colored(message, "green", attrs=["bold"]))
+            return True
+        if state == "error":
+            print("[" + termcolor.colored("ERROR", "red", attrs=["blink", "bold"]) + "] " + termcolor.colored(message, "red", attrs=["bold"]))
+            return True
+        if state == "warning":
+            # 208
+            from colored import fg, attr, style
+            print("[" + fg(241) + attr("bold") + attr("blink") + "WARNING" + style.RESET + "] " + fg(241) + attr("bold") + message + style.RESET)
+            return True
+        if state == "info":
+            print("[" + termcolor.colored("INFO", "cyan", attrs=["bold"]) + "] " + termcolor.colored(message, "cyan", attrs=["bold"]))
+            return True
+        if state == "debug":
+            print("[" + termcolor.colored("DEBUG", "magenta", attrs=["bold"]) + "] " + termcolor.colored(message, "magenta", attrs=["bold"]))
+            return True
+        if state == "sys":
+            print("[" + termcolor.colored("SYSTEM", "blue", attrs=["bold"]) + "] " + termcolor.colored(message, "blue", attrs=["bold"]))
+            return True
     except ImportError:
-        logger.write("e", "ImportError: Import statement failed!", lloc=lloc)
+        logger.write("e", "ImportError: Some module in list created the error!", lloc=lloc)
         return False
-    except KeyboardInterrupt:
-        logger.write("e", "KeyboardInterrupt: Program has ended, during KeyboardInterrupt (Ctrl + C)!", lloc=lloc)
-        return False
-    except LookupError:
-        logger.write("e", "LookupError: LookupError!", lloc=lloc)
-        return False
-    except IndexError:
-        logger.write("e", "IndexError: Index in sequence was not found!", lloc=lloc)
-        return False
-    except KeyError:
-        logger.write("e", "KeyError: Key in dictionary was not found!", lloc=lloc)
-        return False
-    except NameError:
-        logger.write("e", "NameError: Identifier was not found in local or global namespace!", lloc=lloc)
-        return False
-    except UnboundLocalError:
-        logger.write("e", "UnboundLocalError: No value was assigned to variable in function or method!", lloc=lloc)
-        return False
-    except EnvironmentError:
-        logger.write("e", "EnvironmentError: Exception occurred outside the Python environment!", lloc=lloc)
-        return False
-    except IOError:
-        logger.write("e", "IOError: Input / Output operation failed!", lloc=lloc)
-        return False
-    except SyntaxError:
-        logger.write("e", "SyntaxError: Syntax error in python code!", lloc=lloc)
-        return False
-    except IndentationError:
-        logger.write("e", "IndentationError: Indentation is not specified properly!", lloc=lloc)
-        return False
-    except SystemError:
-        logger.write("e", "SystemError: Interpreter found internal problem, but interpreter has not exited!", lloc=lloc)
-        return False
-    except TypeError:
-        logger.write("e", "TypeError: Operation or Function is attempted which is invalid for the specific data type!", lloc=lloc)
-        return False
-    except ValueError:
-        logger.write("e", "ValueError: Built-in function for data type has valid type of arguments, but arguments have invalid values specified!", lloc=lloc)
-        return False
-    except RuntimeError:
-        logger.write("e", "RuntimeError: Generated error does not fall into any category!", lloc=lloc)
-        return False
-    except NotImplementedError:
-        logger.write("e", "NotImplementedError: Abstract method that needs to be implemented in an inherited class is not actually implemented!", lloc=lloc)
-        return False
-
-
-def decrypt(key, token, debug=0):
-    try:
-        import logger
-        lloc = "File: cryptographer.py | Function: decrypt | Message: "
-        logger.write("i", "Decrypting string with arguments: key=hidden, token=["+token+"], debug=["+str(debug)+"]!", lloc=lloc)
-        from Crypto.Cipher import AES
-        import base64
-        BLOCK_SIZE = 32
-        PADDING = '{'
-        if debug is 1:
-            logger.write("d", "BLOCK_SIZE = ["+str(BLOCK_SIZE)+"]", lloc=lloc)
-            logger.write("d", "PADDING = ["+str(PADDING)+"]", lloc=lloc)
-        pad = lambda s: s + (BLOCK_SIZE - len(s) % BLOCK_SIZE) * PADDING
-        if debug is 1:
-            logger.write("d", "pas = ["+str(pad)+"]", lloc=lloc)
-        DecodeAES = lambda c, e: c.decrypt(base64.b64decode(e)).rstrip(PADDING)
-        if debug is 1:
-            logger.write("d", "DecodeAES = ["+str(DecodeAES)+"]", lloc=lloc)
-        cipher = AES.new(key)
-        if debug is 1:
-            logger.write("d", "cipher = ["+str(cipher)+"]", lloc=lloc)
-        decoded = DecodeAES(cipher, token)
-        if debug is 1:
-            logger.write("d", "decoded = ["+str(decoded)+"]", lloc=lloc)
-        logger.write("i", "Successfully decoded string!", lloc=lloc)
-        return decoded
     except StopIteration:
         logger.write("e", "StopIteration: next() method does not point at any object!", lloc=lloc)
         return False

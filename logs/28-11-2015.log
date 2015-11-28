@@ -1,0 +1,103 @@
+28/11/2015 05:31:15 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:31:19 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[null], debug=[0]!
+28/11/2015 05:31:23 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[null 1 2 3 4 5], debug=[0]!
+28/11/2015 05:34:35 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:34:39 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown 1 2 3], debug=[0]!
+28/11/2015 05:34:39 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[['1', '2', '3']], debug=[0]!
+28/11/2015 05:34:45 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:34:45 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[[]], debug=[0]!
+28/11/2015 05:34:52 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:34:55 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:34:55 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[[]], debug=[0]!
+28/11/2015 05:35:04 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:35:06 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:35:06 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[[]], debug=[0]!
+28/11/2015 05:35:28 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:35:34 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:35:34 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[['shutdown']], debug=[0]!
+28/11/2015 05:35:47 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:35:52 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:35:52 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[['shutdown']], debug=[0]!
+28/11/2015 05:36:10 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:36:12 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:36:12 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[['shutdown']], debug=[0]!
+28/11/2015 05:37:47 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:37:49 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:37:49 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[shutdown], debug=[0]!
+28/11/2015 05:37:53 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown -s], debug=[0]!
+28/11/2015 05:37:53 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[shutdown], debug=[0]!
+28/11/2015 05:38:26 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:38:28 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:38:28 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[shutdown], debug=[0]!
+28/11/2015 05:38:52 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:38:55 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:38:55 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[shutdown], debug=[0]!
+28/11/2015 05:39:08 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:39:11 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:39:11 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[shutdown], debug=[0]!
+28/11/2015 05:39:27 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:39:31 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shtdo], debug=[0]!
+28/11/2015 05:39:31 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shtdo], args=[shtdo], debug=[0]!
+28/11/2015 05:39:34 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:39:34 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[shutdown], debug=[0]!
+28/11/2015 05:39:42 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown -a], debug=[0]!
+28/11/2015 05:39:42 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[shutdown], debug=[0]!
+28/11/2015 05:40:13 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:40:19 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown 1 2 3 4], debug=[0]!
+28/11/2015 05:40:34 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:40:36 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown 1 2 3 4], debug=[0]!
+28/11/2015 05:40:36 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[shutdown], debug=[0]!
+28/11/2015 05:43:25 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:43:27 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown 1 2 3 4], debug=[0]!
+28/11/2015 05:43:27 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[shutdown], debug=[0]!
+28/11/2015 05:43:45 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:43:46 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[print splitted], debug=[0]!
+28/11/2015 05:43:46 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[print], args=[print], debug=[0]!
+28/11/2015 05:44:01 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown 1 2 3], debug=[0]!
+28/11/2015 05:44:01 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[shutdown], debug=[0]!
+28/11/2015 05:44:42 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:44:43 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[], debug=[0]!
+28/11/2015 05:44:43 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[], args=[[]], debug=[0]!
+28/11/2015 05:44:48 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown 1 2 3 4], debug=[0]!
+28/11/2015 05:44:48 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[['1', '2', '3', '4']], debug=[0]!
+28/11/2015 05:45:03 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:45:03 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[[]], debug=[0]!
+28/11/2015 05:45:15 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:45:19 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown 1 2], debug=[0]!
+28/11/2015 05:45:19 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[['1', '2']], debug=[0]!
+28/11/2015 05:45:35 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:45:35 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[[]], debug=[0]!
+28/11/2015 05:45:39 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:45:41 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:45:41 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[[]], debug=[0]!
+28/11/2015 05:47:27 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:47:30 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:47:30 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[[]], debug=[0]!
+28/11/2015 05:47:35 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown 1], debug=[0]!
+28/11/2015 05:47:35 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[['1']], debug=[0]!
+28/11/2015 05:47:48 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:47:50 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown 1], debug=[0]!
+28/11/2015 05:47:50 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[['1']], debug=[0]!
+28/11/2015 05:48:48 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:48:50 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:48:50 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[[]], debug=[0]!
+28/11/2015 05:48:53 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown 1], debug=[0]!
+28/11/2015 05:48:53 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[['1']], debug=[0]!
+28/11/2015 05:48:58 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown 1 2], debug=[0]!
+28/11/2015 05:48:58 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[['1', '2']], debug=[0]!
+28/11/2015 05:49:18 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:49:21 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown 1], debug=[0]!
+28/11/2015 05:49:21 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[['1']], debug=[0]!
+28/11/2015 05:49:26 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown 1 2], debug=[0]!
+28/11/2015 05:49:26 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[['1', '2']], debug=[0]!
+28/11/2015 05:51:59 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:52:01 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:52:01 | INFO: File: console.py | Function: commandanalyzer | Message: Trying to analyze command with arguments: command=[shutdown], args=[[]], debug=[0]!
+28/11/2015 05:53:00 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:53:03 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:53:06 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:53:16 | INFO: File: console.py | Function: newconsole | Message: Trying create new console with arguments: user=[root], host=[azurite], title=[TestConsole], debug=[0]!
+28/11/2015 05:53:17 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:53:20 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[help], debug=[0]!
+28/11/2015 05:53:22 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown], debug=[0]!
+28/11/2015 05:53:25 | INFO: File: console.py | Function: uinsplit | Message: Trying to split userinput with arguments: userinput=[shutdown 1], debug=[0]!
